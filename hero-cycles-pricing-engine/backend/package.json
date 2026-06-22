@@ -1,0 +1,20 @@
+{
+  "name": "hero-cycles-pricing-backend",
+  "version": "1.0.0",
+  "description": "Pricing engine backend for Hero Cycles configurator",
+  "main": "src/server.js",
+  "type": "module",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "seed": "node src/seed.js",
+    "test": "node --test tests/**/*.test.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  }
+}

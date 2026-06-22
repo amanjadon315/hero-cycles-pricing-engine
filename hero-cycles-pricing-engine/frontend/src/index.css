@@ -1,0 +1,109 @@
+/* ==========================================================================
+   Hero Cycles Pricing Configurator — Design tokens
+   ==========================================================================
+   Subject: a salesperson's quoting instrument, modeled on a workshop spec
+   tag / parts ledger rather than a generic SaaS dashboard. Prices and SKUs
+   are the product, so numerals get a tabular monospace face throughout;
+   labels and UI chrome use a quiet grotesk.
+   ========================================================================== */
+
+:root {
+  /* Color */
+  --paper: #FAF8F3;
+  --paper-raised: #FFFFFF;
+  --ink: #1C1F1E;
+  --ink-soft: #4A4843;
+  --muted: #8A8478;
+  --line: #DEDACE;
+  --line-strong: #C7C2B3;
+  --brick: #B33A2E;
+  --brick-dark: #8E2D24;
+  --steel: #3D5A6C;
+  --steel-soft: #E8EEF1;
+  --ok: #3D6B4F;
+
+  /* Type */
+  --font-display: 'IBM Plex Sans', -apple-system, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', monospace;
+
+  /* Layout */
+  --radius-sm: 3px;
+  --radius-md: 6px;
+  --shadow-card: 0 1px 2px rgba(28, 31, 30, 0.06), 0 1px 1px rgba(28, 31, 30, 0.04);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-display);
+  -webkit-font-smoothing: antialiased;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+input, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.mono {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+::selection {
+  background: var(--brick);
+  color: var(--paper);
+}
+
+/* Visible keyboard focus, never suppressed */
+:focus-visible {
+  outline: 2px solid var(--steel);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Scrollbar restraint */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--line-strong);
+  border-radius: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
