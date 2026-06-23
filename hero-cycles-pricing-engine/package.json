@@ -7,10 +7,7 @@
   },
   "scripts": {
     "build": "cd frontend && npm install && npm run build && cd ../backend && npm install && node src/seed.js",
-    "start": "cross-env NODE_ENV=production node backend/src/server.js",
+    "start": "NODE_ENV=production node backend/src/server.js",
     "start:prod": "NODE_ENV=production node backend/src/server.js"
-  },
-  "dependencies": {
-    "cross-env": "^7.0.3"
   }
 }
