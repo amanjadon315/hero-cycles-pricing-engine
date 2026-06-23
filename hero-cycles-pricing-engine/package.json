@@ -1,0 +1,16 @@
+{
+  "name": "hero-cycles-pricing-engine",
+  "version": "1.0.0",
+  "description": "Pricing engine for Hero Cycles",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "build": "cd frontend && npm install && npm run build && cd ../backend && npm install && node src/seed.js",
+    "start": "cross-env NODE_ENV=production node backend/src/server.js",
+    "start:prod": "NODE_ENV=production node backend/src/server.js"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3"
+  }
+}
