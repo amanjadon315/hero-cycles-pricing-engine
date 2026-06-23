@@ -2,7 +2,7 @@
 // Thin fetch wrapper around the backend API. Centralizing this means the
 // base URL only needs to change in one place, and error handling is consistent.
 
-const BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:4000/api';
+const BASE_URL = import.meta.env.VITE_API_URL || '/api';
 
 async function request(path, options = {}) {
   const res = await fetch(`${BASE_URL}${path}`, {
